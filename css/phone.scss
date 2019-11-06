@@ -1,0 +1,59 @@
+$color-org:#ff980f;
+$colorf:#fff;
+$color9:#999;
+$color6:#666;
+$color3:#333;
+$color0:#000;
+$colorfa:#fafafa;
+@media (max-width:767px){
+  .fon24{ font-size: 18px;}
+  .item-main{
+    font-size: 13px;line-height: 1.5;
+    .item-left{ width: 100%;}
+    .item-right{ width: 100%;}
+    .max390{ max-width: 80%;}
+  }
+  .item2-main{ font-size: 13px;line-height: 1.5;}
+  .item3-main{
+    flex-wrap: wrap-reverse; margin-bottom: 20px; font-size: 13px; 
+    .item3-left{ width: 100%;}
+    .item3-right{ width: 100%;}
+    .max280{ max-width: 100%;line-height: 1.5;}
+  }
+  .item4-main{ flex-wrap:wrap;}
+  .item1-1 { margin-bottom: 10px;}
+  .p-w100{ width: 100%;}
+
+  .footer{
+    dt{ font-size: 14px;}
+    dd a{  font-size: 13px; }
+    .share-icon{ padding: 10px 0; }
+    .share-icon  img{ width: 20px;}
+  }
+
+  .banner-item{
+    .brand-left{ width: 100%; }
+    .brand-right{ width: 100%; margin-top: 20px;}
+  }
+  .brand-lists li{ width: 100%}
+  
+  
+.yj-main{ margin-top: 20px;
+  .yj-img{ width:100% ;  padding-bottom: 20px;}
+  .yj-con{ width: 100%; justify-content: flex-start;padding-bottom: 20px; }
+  .yj-img::after{ display: none}
+  li:nth-child(2n){ flex-wrap: wrap}
+}
+
+.zuanshi-list{
+  margin-bottom: 20px; margin-top: 20px;
+  li{margin-top: 0;}
+  .peiyu-img{ width:100%}
+  .peiyu-con{ width: 100%; padding-top: 20px;}
+  li:nth-child(2n){ flex-wrap: wrap}
+  .fon24{ margin-bottom: 0}
+  .peiyu-img::after{ background-size: 100% 100%; padding-bottom: 10px; bottom: -15px}
+}
+.zs-img{ margin-bottom: 20px;}
+  
+}
