@@ -69,7 +69,7 @@ input,textarea,select,*{ outline: none;}
 /*header*/
 .flex-end{ align-items: center; justify-content: flex-end;}
 header{padding-top: 130px;}
-.header-bottom{ height: 50px;}
+.header-bottom{ height: 50px; justify-content: space-between; align-items: center;}
 .header{
   ul{ width: 100%; height: 40px; border-top: 1px solid $colorp; border-bottom: 1px solid $colorp; display: flex; align-items: center;}
   li{ flex: 1; text-align: center;}
@@ -197,6 +197,50 @@ header{padding-top: 130px;}
 .conacts{ justify-content: space-between; padding: 20px 0; }
 .contact-left{ width: 41%}
 .contact-right{ width: 55%}
+
+.zuanshi-line{ background: url(../images/c-line2.png) no-repeat center;  background-size: contain;
+  span{ padding: 0 10px;}
+}
+.contact-padding{ padding: 60px 0 0 0;}
+
+.zixun-con{ margin-bottom: 60px;
+  h3{ font-size: 18px; line-height: 40px; border-bottom: 1px solid $colororg; font-weight: normal; color: $colororg; margin-bottom: 20px;}
+}
+.zixun-left{
+   width: 23%; flex-shrink: 0; padding-top: 40px;
+   .zixun-img{ display: block;}
+   .zixun-item{ margin-bottom: 20px;}
+   .zixun-nav li{ padding: 10px 0; margin-bottom: 20px;}
+   .zixun-list1 a{ line-height: 1.8; color: $color9;}
+   .zixun-img{ margin-bottom:10px;}
+   .zixun-item li{ margin-bottom: 20px;}
+}
+.zixun-right{ width: 77%;  overflow: hidden; padding-left: 5.5%;}
+.banner-zixun{
+  margin-bottom: 30px;
+  .swiper-pagination{ position: static;}
+  .swiper-pagination-bullet{ background: $colororg; opacity: 1;}
+  .swiper-pagination-bullet-active{ background: $color3;}
+}
+
+.zixun-list2{ 
+   justify-content: space-between;
+   li{ width: 48%; cursor: pointer; margin-bottom: 20px;}
+   .zixun-p{  display: block; position: relative; }
+   .zixun-p a{background: $colorf;  position: relative; z-index: 2; display: block; padding: 20px 15px 50px;}
+   .zixun-p::after{ display: block; content: ''; position: absolute; right:-3px; bottom: -12px;background: url(../images/zixun-list-bg.png) no-repeat center; width: 100%; height: 100%; background-size:160% 100%}
+}
+.page{ padding: 60px  0  0 0; font-family: Arial, Helvetica, sans-serif; font-size: 14px;
+ a{ margin: 0 5px;}
+}
+.mingxing{ padding: 60px 0 ;}
+.mingxing{
+  .gallery-top{ padding-top: 30px; padding-bottom: 30px;}
+  .shadow{ margin-bottom: 30px; padding-bottom: 18px; background: url(../images/mx-line.png) no-repeat center bottom;}
+  .swiper-button-next{ background: url(../images/btn-right.png) no-repeat center; opacity: 1; right: -40px;}
+  .swiper-button-prev{ background: url(../images/btn-left.png) no-repeat center; opacity: 1; left: -40px;}
+  .gallery-thumbs{}
+}
 
 
 @media (max-width:1024px){

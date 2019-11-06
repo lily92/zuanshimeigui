@@ -7,6 +7,8 @@ $color0:#000;
 $colorfa:#fafafa;
 @media (max-width:767px){
   .fon24{ font-size: 18px;}
+  .fon22{ font-size: 16px;}
+  .fon16{ font-size: 14px;}
   .item-main{
     font-size: 13px;line-height: 1.5;
     .item-left{ width: 100%;}
@@ -55,5 +57,20 @@ $colorfa:#fafafa;
   .peiyu-img::after{ background-size: 100% 100%; padding-bottom: 10px; bottom: -15px}
 }
 .zs-img{ margin-bottom: 20px;}
-  
+.contact-left{ width: 100%}
+.contact-right{ width: 95%; margin: 0 auto;}
+.contact-padding{ padding: 15px 0 0 0;}
+.contact{ padding: 30px 0;}
+
+.page{ padding: 30px  0  0 0;}
+.zixun-con{ flex-wrap: wrap; margin-bottom: 10px;}
+.zixun-left{ width: 100%;}
+.zixun-right{ padding-left: 0; width: 100%;}
+
+.mingxing {
+  .swiper-button-next{  right: 0;}
+  .swiper-button-prev{  left: 0;}
+} 
+
+
 }
