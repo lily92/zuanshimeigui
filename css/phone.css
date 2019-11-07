@@ -263,4 +263,22 @@
   .service-list .padd {
     width: 90%;
   }
+  .j-item1 {
+    padding: 30px 0;
+  }
+  .j-item-list {
+    padding-bottom: 15px;
+  }
+  .j-item-list li {
+    width: 90%;
+    margin: 0 auto 15px;
+  }
+  .j-title {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .j-item2-con .item2-left {
+    width: 90%;
+    margin: 0 auto;
+  }
 }

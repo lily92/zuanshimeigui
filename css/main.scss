@@ -1046,6 +1046,32 @@ header {
 }
 // .service-tit{ padding: 60px 0;}
 .underline{ text-decoration: underline;}
+.max1066{ max-width: 1066px; margin:  0 auto;}
+.j-item1{ padding: 60px 0;}
+.j-item-list{
+   justify-content: space-between; padding: 30px 0;
+  li{ width:30%;}
+}
+.j-item2-con{
+  padding: 30px 0;
+  .item2-left{ width: 45%; }
+  .item2-right{ width: 53%; 
+    padding-top: 20px;
+    li{ justify-content: space-between; border-bottom: 1px solid #c9c8c5;  padding-bottom: 8px; align-items: center; margin-bottom: 8px;}
+    .num{ width: 30px; height: 30px; line-height: 30px; text-align: center; border-radius: 50%; background: $colororg; color: $colorf; font-size: 16px;}
+    .desc{ width: calc(100% - 40px);}
+  }
+  
+}
+.bgf{ background: #fff; z-index: 2;}
+.j-item3{ padding-bottom: 60px;}
+.j-item3-con{
+  padding: 30px 0 ; justify-content: space-between; align-content: center;
+  .item3-left{ width: 50.9%; position: relative;}
+  .item3-right{ width: 44%; display: flex; align-items: center;  position: relative;}
+  .item3-left::after{ display: block; content: ''; position: absolute; left: 0; bottom: -14px; height: 18px; width: 100%; background: url(../images/j-bg-left.png) no-repeat left bottom;}
+  .item3-right::after{ display: block; content: ''; position: absolute; right: -6px; bottom: -8px; height: 180px; width: 100%; background: url(../images/j-img4-bg.png) no-repeat right bottom;}
+}
 
 
 @media (max-width: 1024px) {
