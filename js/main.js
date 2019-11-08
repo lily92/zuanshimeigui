@@ -5,7 +5,6 @@ $(function () {
   });
 
   // pc-nav   mouseleave
-
   $('.header').on('mouseenter', '.pc-nav li', function () {
     var _this = $(this);
     _this.find('.dropdown').stop().slideDown();
@@ -16,42 +15,57 @@ $(function () {
     _this.find('.dropdown').stop().slideUp();
   });
 
-
-
-
-
   //加载footer
   $('footer').load("footer.html", "", function (response, status, request) {
     $(this).html(response);
   });
 
-  // 搜索框弹出
-  var isshowSearch = false
-  $("header").delegate("#search_btn", "click", function () {
-    $('.nav-show').css({ 'opacity': 0 })
-    $('.search-form').addClass('search-show')
-    $('.header').addClass('bgf')
-    isshowSearch = true
-  });
-  // 搜索框g关闭
-  $("header").delegate(".search-close", "click", function () {
-    $('.nav-show').css({ 'opacity': 1 })
-    $('.search-form').removeClass('search-show')
-    isshowSearch = false
-  });
+  $(document).ready(function () {
+    $("header").on("click", ".hamburger", function () {
+      $(this).toggleClass("is-active");
+      $('.nav-mobile,.flex-nav').toggleClass('active');
+      if ($(this).hasClass('is-active')) {
+        $('.btn-top').css('z-index', '1')
+      } else {
+        $('.btn-top').css('z-index', '2')
+      }
+    });
 
-  $(window).scroll(function () {
-    var top = $(window).scrollTop();
-    if (top >= 100 || isshowSearch == true) {
-      $('.header').addClass('bgf')
-    } else {
-      $('.header').removeClass('bgf')
-    }
-  });
+    $("header").on("click", ".show-menu", function () {
+      if ($(this).text() == '+') {
+        $(this).parent().parent().parent().find('.show-menu').text('+');
+        $(this).text('-');
+        $(this).parent().parent().parent().find('dd').stop().slideUp();
+        $(this).parent().parent().find('dd').stop().slideDown();
+      } else {
+        $(this).text('+');
+        $(this).parent().parent().find('dd').stop().slideUp();
+      }
+    });
+
+    $('.show-menu').click(function () {
+      if ($(this).text() == '+') {
+        $(this).parent().parent().parent().find('.show-menu').text('+');
+        $(this).text('-');
+        $(this).parent().parent().parent().find('dd').stop().slideUp();
+        $(this).parent().parent().find('dd').stop().slideDown();
+      } else {
+        $(this).text('+');
+        $(this).parent().parent().find('dd').stop().slideUp();
+      }
+    })
+
+    $("header").on("click", ".trd", function () {
+      if ($(this).text() == '+') {
+        $(this).parent().parent().parent().find('ul').stop().slideUp();
+        $(this).parent().parent().parent().find('.trd').text('+');
+        $(this).text('-');
+        $(this).parent().parent().find('ul').stop().slideDown();
+      } else {
+        $(this).text('+');
+        $(this).parent().parent().find('ul').stop().slideUp();
+      }
+    });
+  })
 })
-$(document).ready(function () {
-  $("header").delegate(".hamburger", "click", function () {
-    $(this).toggleClass("is-active");
-    $('.nav-mobile').toggleClass('active')
-  });
-})
+

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" media="screen and (max-width:767px)" href="css/phone.css" />
+  <script src="js/jquery.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/main.js"></script>
+  <title>钻石玫瑰</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="flex flex-center">
+  </header>
+  <!--end  header -->
+
+  <!--star  productd -->
+  <div class="productd max1200 flex">
+    <div class="prod-left flex ">
+      <div class="prod-large positionr">
+        <!-- 图片占位符，勿读后台 -->
+        <img src="images/prod/prod-img-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
+        <div class="positionb bgf">
+          <!-- 大图 -->
+          <img src="" alt="" srcset="" class="w100" id="large_img">
+        </div>
+      </div>
+      <ul class="prod-small flex">
+        <li data-lageImg="images/prod/prod-img.jpg">
+          <div class="positionr small-img">
+            <!-- 图片占位符，勿读后台 -->
+            <img src="images/prod/prod-img-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
+            <div class="positionb">
+              <img src="images/prod/prod-img.jpg" alt="" srcset="" class="w100">
+            </div>
+          </div>
+        </li>
+        <li data-lageImg="images/prod/prod-img1.jpg">
+          <div class="positionr small-img">
+            <img src="images/prod/prod-img-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
+            <div class="positionb">
+              <img src="images/prod/prod-img1.jpg" alt="" srcset="" class="w100">
+            </div>
+          </div>
+        </li>
+        <li data-lageImg="images/prod/prod-img.jpg">
+          <div class="positionr small-img">
+            <img src="images/prod/prod-img-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
+            <div class="positionb">
+              <img src="images/prod/prod-img.jpg" alt="" srcset="" class="w100">
+            </div>
+          </div>
+        </li>
+      </ul>
+      <script>
+       $(function(){
+         var init_img = $('.prod-small li:eq(0)').attr('data-lageImg');
+         $('#large_img').attr('src',init_img)
+         $('.prod-small li ').hover(function () {
+             // over
+             var large_img = $(this).attr('data-lageImg');
+             console.log(large_img)
+             $('#large_img').attr('src',large_img)
+             
+           }, function () {
+             // out
+           }
+         );
+       })
+      </script>
+    </div>
+    <div class="prod-right flex">
+      <div>
+        <p class="fon20 prod-tit"><b>曾几何时系列</b></p>
+        <div class="lineh2">
+          <p>18K金钻石项链[SH040577R-005]
+            是自由飞翔的纸飞机，也是点燃中国梦的五角星。绚丽玫瑰金精镶美钻，映耀
+            梦想光芒。幻变时尚设计，为爱与梦想点赞。</p>
+        </div>
+        <div>
+          <a href="" class="prod-btn">立即购买</a>
+        </div>
+        <div>
+          <p>请联系客服咨询订购<span class="fon22 tel-num"> 4009262988</span></p>
+        </div>
+        <div class="link fon14 lineh2 ">
+          <p><a href="">>联系销售顾问</a></p>
+          <p><a href="">>预约上门服务</a></p>
+          <p><a href="">>查询线下网点</a></p>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end  productd -->
+
+  <!-- 相似商品 -->
+  <div class="like-product max1200">
+    <p class="text-center h3 fon18 like-title">相似商品</p>
+    <!-- -list -->
+    <div class="brand-list  list-shadow">
+      <ul class="brand-lists">
+        <li>
+          <div class="brand-img positionr">
+            <!-- 图片占位符，勿读图片 -->
+            <img src="images/prod/prod-img-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
+            <div class="positionb">
+              <img src="images/prod/prod-img.jpg" alt="" srcset="" class="w100">
+            </div>
+            <div class="positionb master flex flex-center text-center">
+              <div>
+                <h3>钻石世家一诺一生群镶钻石耳钉</h3>
+                <p class="line2 txt">灵感来源于菩提花，10颗美钻环绕主钻，群镶钻戒共500多个切面，使光芒透过更多切面折射，形成克拉效果。</p>
+                <p class="add-btn"><a href=""><img src="images/jiahao.png" alt="" srcset=""></a></p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="brand-img positionr">
+            <!-- 图片占位符，勿读图片 -->
+            <img src="images/prod/prod-img-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
+            <div class="positionb">
+              <img src="images/prod/prod-img.jpg" alt="" srcset="" class="w100">
+            </div>
+            <div class="positionb master flex flex-center text-center">
+              <div>
+                <h3>钻石世家一诺一生群镶钻石耳钉</h3>
+                <p class="line2 txt">灵感来源于菩提花，10颗美钻环绕主钻，群镶钻戒共500多个切面，使光芒透过更多切面折射，形成克拉效果。</p>
+                <p class="add-btn"><a href=""><img src="images/jiahao.png" alt="" srcset=""></a></p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="brand-img positionr">
+            <!-- 图片占位符，勿读图片 -->
+            <img src="images/prod/prod-img-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
+            <div class="positionb">
+              <img src="images/prod/prod-img.jpg" alt="" srcset="" class="w100">
+            </div>
+            <div class="positionb master flex flex-center text-center">
+              <div>
+                <h3>钻石世家一诺一生群镶钻石耳钉</h3>
+                <p class="line2 txt">灵感来源于菩提花，10颗美钻环绕主钻，群镶钻戒共500多个切面，使光芒透过更多切面折射，形成克拉效果。</p>
+                <p class="add-btn"><a href=""><img src="images/jiahao.png" alt="" srcset=""></a></p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+    <!-- end  list -->
+  </div>
+
+  <div class="max1200 prod-lage-img">
+    <p class="line-f"><img src="images/icon-f.png" alt="" srcset="" class="line-f-icon"></p>
+    <br>
+    <div>
+      <img src="images/prod/prod-lg-img.jpg" alt="" srcset="" class="w100">
+    </div>
+  </div>
+
+  <!--star  footer -->
+  <footer class="footer text-center  max1200">
+  </footer>
+  <!-- end footer -->
+
+</body>
+
+</html>

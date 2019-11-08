@@ -27,15 +27,31 @@
     <div class="positionb flex video">
       <div class="positionr  video-left">
         <img src="images/mx-banner-video.jpg" alt="" srcset="">
-        <div class="positionb">
-          <video src="" class="w100 video-play" poster="images/mx-banner-video.jpg"></video>
-        </div>
         <div class="positionb flex-center  flex">
-          <img src="images/video-btn.png" alt="" class="video-btn">
+          <img src="images/video-btn.png" alt="" class="video-btn" id="btn_play">
         </div>
       </div>
     </div>
   </div>
+  <div class="video-show flex flex-center ">
+      <img src="images/close.png" alt="" srcset="" class="btn-close">
+      <video controls
+        src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+        class=" video" poster="images/shipin-img.jpg" id="video"></video>
+    </div>
+    <script>
+      $(function () {
+        var video = document.getElementById('video');
+        $('#btn_play').click(function () {
+          $('.video-show').addClass('active');
+          video.play(); //暂停控制
+        })
+        $('.btn-close').click(function () {
+          $('.video-show').removeClass('active');
+          video.pause(); //暂停控制
+        })
+      })
+    </script>
   <!-- end banner -->
 
   <!-- meixue -->
