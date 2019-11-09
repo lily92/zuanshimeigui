@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" media="screen and (max-width:767px)" href="css/phone.css" />
   <script src="js/jquery.min.js"></script>
+  <script src="layui/layui.js"></script>
   <script src="js/swiper.min.js"></script>
   <script src="js/main.js"></script>
   <title>钻石玫瑰</title>
@@ -28,19 +29,23 @@
   <!-- end banner -->
 
   <!--star list -->
-  <div class="yh-list max1200">
+  <div class="yh-list max1200" id="yh_list">
+   
+  </div>
+  <script id="yh_tpl" type="text/html">
     <ul>
+        {{#  layui.each(d.list, function(index, item){ }}
       <li class="flex">
         <div class="yh-img positionr">
           <!-- 图片占位符，勿读后台 -->
           <img src="images/yh-img-bg.jpg" alt="" srcset="" class="w100">
           <div class="positionb flex-center flex-center">
-            <img src="images/yh-img.jpg" alt="" srcset="" class="w100">
+            <img src="{{item.img}}" alt="" srcset="" class="w100">
           </div>
         </div>
         <div class="yh-con flex flex-center">
           <div>
-            <p class="fon18 colororg yh-tit">唯此一颗 为此一刻</p>
+            <p class="fon18 colororg yh-tit">{{item.title}}</p>
             <div>
               以“优雅进取”的核心理念，传递钻石永恒爱意与动人传奇。<br>
               Diamond Rose钻石玫瑰，<br>
@@ -55,53 +60,50 @@
           </div>
         </div>
       </li>
-      <li class="flex">
-        <div class="yh-img positionr">
-          <!-- 图片占位符，勿读后台 -->
-          <img src="images/yh-img-bg.jpg" alt="" srcset="" class="w100">
-          <div class="positionb flex-center flex-center">
-            <img src="images/yh-img.jpg" alt="" srcset="" class="w100">
-          </div>
-        </div>
-        <div class="yh-con flex flex-center">
-          <div>
-            <div class="fon18 colororg yh-tit">
-              <p class="fonar">One life one love</p>
-              <p>一生一爱</p>
-            </div>
-            <div>
-              一爱一人生的誓言，弥足珍贵，<br>
-              值得以世间美丽隽永的信物 永久珍藏，<br>
-              钻石世家 探寻百万爱侣幸福哲学，印证爱情恒久美好。
-            </div>
-
-          </div>
-        </div>
-      </li>
-      <li class="flex">
-        <div class="yh-img positionr">
-          <!-- 图片占位符，勿读后台 -->
-          <img src="images/yh-img-bg.jpg" alt="" srcset="" class="w100">
-          <div class="positionb flex-center flex-center">
-            <img src="images/yh-img.jpg" alt="" srcset="" class="w100">
-          </div>
-        </div>
-        <div class="yh-con flex flex-center">
-          <div>
-            <div class="fon18 colororg yh-tit">
-              <p>唯一无二的真爱</p>
-            </div>
-            <div>
-              Diamond Rose钻石玫瑰家“一生一爱”明星婚嫁系列，<br>
-              以“一”为设计灵感，<br>
-              捕捉这意义非凡的瞬间感受。<br>
-            </div>
-
-          </div>
-        </div>
-      </li>
+      {{#  }); }}
     </ul>
-  </div>
+  </script>
+    <script>
+        layui.use('laytpl', function () {
+          var laytpl = layui.laytpl;
+          var data_brand_news = {
+            //品牌新闻数据
+            "list": [
+              {
+                "id": "02",
+                "title": "唯此一颗 为此一刻",
+                "desc": '以“优雅进取”的核心理念，传递钻石永恒爱意与动人传奇。<br>Diamond Rose钻石玫瑰，<br>以世间唯此一件的珍贵闪耀，见证有爱人生的所有精彩。',
+                "img": "images/yh-img.jpg"
+              },
+              {
+                "id": "02",
+                "title": "唯此一颗 为此一刻",
+                "desc": '以“优雅进取”的核心理念，传递钻石永恒爱意与动人传奇。<br>Diamond Rose钻石玫瑰，<br>以世间唯此一件的珍贵闪耀，见证有爱人生的所有精彩。',
+                "img": "images/yh-img.jpg"
+              },
+              {
+                "id": "02",
+                "title": "唯此一颗 为此一刻",
+                "desc": '以“优雅进取”的核心理念，传递钻石永恒爱意与动人传奇。<br>Diamond Rose钻石玫瑰，<br>以世间唯此一件的珍贵闪耀，见证有爱人生的所有精彩。',
+                "img": "images/yh-img.jpg"
+              },
+              {
+                "id": "02",
+                "title": "唯此一颗 为此一刻",
+                "desc": '以“优雅进取”的核心理念，传递钻石永恒爱意与动人传奇。<br>Diamond Rose钻石玫瑰，<br>以世间唯此一件的珍贵闪耀，见证有爱人生的所有精彩。',
+                "img": "images/yh-img.jpg"
+              }
+            ]
+          }
+          var getTpl = yh_tpl.innerHTML;
+          var view = document.getElementById('yh_list');
+          laytpl(getTpl).render(data_brand_news, function (html) {
+            view.innerHTML = html;
+          });
+    
+    
+        })
+      </script>
   <!--end list -->
 
   <!--star list-banner -->

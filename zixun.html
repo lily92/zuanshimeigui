@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" media="screen and (max-width:767px)" href="css/phone.css" />
   <script src="js/jquery.min.js"></script>
+  <script src="layui/layui.js"></script>
   <script src="js/swiper.min.js"></script>
   <script src="js/main.js"></script>
   <title>钻石玫瑰</title>
@@ -42,91 +43,45 @@
       </div>
       <div class="zixun-item">
         <h3>最新消息</h3>
-        <ul class="zixun-list1">
-          <li>
-            <a class="zixun-img positionr" class="w100">
-              <!-- 占位符。勿读后台 -->
-              <img src="images/zixun-img-bg.jpg" alt="" srcset="" class="w100">
-              <div class="positionb">
-                <img src="images/zixun-img.jpg" alt="" srcset="" class="w100">
-              </div>
-            </a>
-            <a class="line2">
-              钻石玫瑰助窦骁求婚《十年三月三十
-              日》收官
-            </a>
-          </li>
-          <li>
-            <a class="zixun-img positionr" class="w100">
-              <!-- 占位符。勿读后台 -->
-              <img src="images/zixun-img-bg.jpg" alt="" srcset="" class="w100">
-              <div class="positionb">
-                <img src="images/zixun-img.jpg" alt="" srcset="" class="w100">
-              </div>
-            </a>
-            <a class="line2">
-              钻石玫瑰助窦骁求婚《十年三月三十
-              日》收官
-            </a>
-          </li>
-          <li>
-            <a class="zixun-img positionr" class="w100">
-              <!-- 占位符。勿读后台 -->
-              <img src="images/zixun-img-bg.jpg" alt="" srcset="" class="w100">
-              <div class="positionb">
-                <img src="images/zixun-img.jpg" alt="" srcset="" class="w100">
-              </div>
-            </a>
-            <a class="line2">
-              钻石玫瑰助窦骁求婚《十年三月三十
-              日》收官
-            </a>
-          </li>
+        <ul class="zixun-list1" id="zixun1">
         </ul>
+        <script id="zixun1_tpl" type="text/html">
+          {{#  layui.each(d.list, function(index, item){ }}
+           <li>
+            <a class="zixun-img positionr" class="w100">
+              <!-- 占位符。勿读后台 -->
+              <img src="images/zixun-img-bg.jpg" alt="" srcset="" class="w100">
+              <div class="positionb">
+                <img src="{{item.img}}" alt="" srcset="" class="w100">
+              </div>
+            </a>
+            <a class="line2">
+               {{item.title}}
+            </a>
+          </li> 
+          {{#  }); }}
+        </script>
       </div>
       <div class="zixun-item">
         <h3>明星资讯</h3>
-        <ul class="zixun-list1">
-          <li>
-            <a class="zixun-img positionr" class="w100">
-              <!-- 占位符。勿读后台 -->
-              <img src="images/zixun-img-bg.jpg" alt="" srcset="" class="w100">
-              <div class="positionb">
-                <img src="images/zixun-img.jpg" alt="" srcset="" class="w100">
-              </div>
-            </a>
-            <a class="line2">
-              钻石玫瑰助窦骁求婚《十年三月三十
-              日》收官
-            </a>
-          </li>
-          <li>
-            <a class="zixun-img positionr" class="w100">
-              <!-- 占位符。勿读后台 -->
-              <img src="images/zixun-img-bg.jpg" alt="" srcset="" class="w100">
-              <div class="positionb">
-                <img src="images/zixun-img.jpg" alt="" srcset="" class="w100">
-              </div>
-            </a>
-            <a class="line2">
-              钻石玫瑰助窦骁求婚《十年三月三十
-              日》收官
-            </a>
-          </li>
-          <li>
-            <a class="zixun-img positionr" class="w100">
-              <!-- 占位符。勿读后台 -->
-              <img src="images/zixun-img-bg.jpg" alt="" srcset="" class="w100">
-              <div class="positionb">
-                <img src="images/zixun-img.jpg" alt="" srcset="" class="w100">
-              </div>
-            </a>
-            <a class="line2">
-              钻石玫瑰助窦骁求婚《十年三月三十
-              日》收官
-            </a>
-          </li>
+        <ul class="zixun-list" id="zixun2">
         </ul>
+        <script id="zixun2_tpl" type="text/html">
+          {{#  layui.each(d.list, function(index, item){ }}
+           <li>
+            <a class="zixun-img positionr" class="w100">
+              <!-- 占位符。勿读后台 -->
+              <img src="images/zixun-img-bg.jpg" alt="" srcset="" class="w100">
+              <div class="positionb">
+                <img src="{{item.img}}" alt="" srcset="" class="w100">
+              </div>
+            </a>
+            <a class="line2">
+               {{item.title}}
+            </a>
+          </li> 
+          {{#  }); }}
+        </script>
       </div>
     </div>
     <div class="zixun-right">
@@ -162,128 +117,28 @@
       </div>
       <!-- end banner -->
 
-      <ul class="zixun-list2 flex">
-        <li>
-          <div class="zixun-list2-img  w100 positionr">
-            <img src="images/zixun-img-bg.jpg" alt="" srcset="" class="w100">
-            <a class="positionb">
-              <img src="images/zixun-img.jpg" alt="" srcset="" class="w100">
-            </a>
-          </div>
-          <div class="zixun-p">
-            <a>
-              <p class="fon18 colororg nowarp">钻石玫瑰助窦骁求婚《十年三月三十日》收官</p>
-              <p class="line2">近日，由窦骁娜扎浪漫演绎的热播剧《十年三月三十日》甜蜜收官，
-                大结局的告白撒花时刻，甜蜜撒糖...</p>
-            </a>
-          </div>
-        </li>
-        <li>
-          <div class="zixun-list2-img  w100 positionr">
-            <img src="images/zixun-img-bg.jpg" alt="" srcset="" class="w100">
-            <a class="positionb">
-              <img src="images/zixun-img.jpg" alt="" srcset="" class="w100">
-            </a>
-          </div>
-          <div class="zixun-p">
-            <a>
-              <p class="fon18 colororg nowarp">钻石玫瑰助窦骁求婚《十年三月三十日》收官</p>
-              <p class="line2">近日，由窦骁娜扎浪漫演绎的热播剧《十年三月三十日》甜蜜收官，
-                大结局的告白撒花时刻，甜蜜撒糖...</p>
-            </a>
-          </div>
-        </li>
-        <li>
-          <div class="zixun-list2-img  w100 positionr">
-            <img src="images/zixun-img-bg.jpg" alt="" srcset="" class="w100">
-            <a class="positionb">
-              <img src="images/zixun-img.jpg" alt="" srcset="" class="w100">
-            </a>
-          </div>
-          <div class="zixun-p">
-            <a>
-              <p class="fon18 colororg nowarp">钻石玫瑰助窦骁求婚《十年三月三十日》收官</p>
-              <p class="line2">近日，由窦骁娜扎浪漫演绎的热播剧《十年三月三十日》甜蜜收官，
-                大结局的告白撒花时刻，甜蜜撒糖...</p>
-            </a>
-          </div>
-        </li>
-        <li>
-          <div class="zixun-list2-img  w100 positionr">
-            <img src="images/zixun-img-bg.jpg" alt="" srcset="" class="w100">
-            <a class="positionb">
-              <img src="images/zixun-img.jpg" alt="" srcset="" class="w100">
-            </a>
-          </div>
-          <div class="zixun-p">
-            <a>
-              <p class="fon18 colororg nowarp">钻石玫瑰助窦骁求婚《十年三月三十日》收官</p>
-              <p class="line2">近日，由窦骁娜扎浪漫演绎的热播剧《十年三月三十日》甜蜜收官，
-                大结局的告白撒花时刻，甜蜜撒糖...</p>
-            </a>
-          </div>
-        </li>
-        <li>
-          <div class="zixun-list2-img  w100 positionr">
-            <img src="images/zixun-img-bg.jpg" alt="" srcset="" class="w100">
-            <a class="positionb">
-              <img src="images/zixun-img.jpg" alt="" srcset="" class="w100">
-            </a>
-          </div>
-          <div class="zixun-p">
-            <a>
-              <p class="fon18 colororg nowarp">钻石玫瑰助窦骁求婚《十年三月三十日》收官</p>
-              <p class="line2">近日，由窦骁娜扎浪漫演绎的热播剧《十年三月三十日》甜蜜收官，
-                大结局的告白撒花时刻，甜蜜撒糖...</p>
-            </a>
-          </div>
-        </li>
-        <li>
-          <div class="zixun-list2-img  w100 positionr">
-            <img src="images/zixun-img-bg.jpg" alt="" srcset="" class="w100">
-            <a class="positionb">
-              <img src="images/zixun-img.jpg" alt="" srcset="" class="w100">
-            </a>
-          </div>
-          <div class="zixun-p">
-            <a>
-              <p class="fon18 colororg nowarp">钻石玫瑰助窦骁求婚《十年三月三十日》收官</p>
-              <p class="line2">近日，由窦骁娜扎浪漫演绎的热播剧《十年三月三十日》甜蜜收官，
-                大结局的告白撒花时刻，甜蜜撒糖...</p>
-            </a>
-          </div>
-        </li>
-        <li>
-          <div class="zixun-list2-img  w100 positionr">
-            <img src="images/zixun-img-bg.jpg" alt="" srcset="" class="w100">
-            <a class="positionb">
-              <img src="images/zixun-img.jpg" alt="" srcset="" class="w100">
-            </a>
-          </div>
-          <div class="zixun-p">
-            <a>
-              <p class="fon18 colororg nowarp">钻石玫瑰助窦骁求婚《十年三月三十日》收官</p>
-              <p class="line2">近日，由窦骁娜扎浪漫演绎的热播剧《十年三月三十日》甜蜜收官，
-                大结局的告白撒花时刻，甜蜜撒糖...</p>
-            </a>
-          </div>
-        </li>
-        <li>
-          <div class="zixun-list2-img  w100 positionr">
-            <img src="images/zixun-img-bg.jpg" alt="" srcset="" class="w100">
-            <a class="positionb">
-              <img src="images/zixun-img.jpg" alt="" srcset="" class="w100">
-            </a>
-          </div>
-          <div class="zixun-p">
-            <a>
-              <p class="fon18 colororg nowarp">钻石玫瑰助窦骁求婚《十年三月三十日》收官</p>
-              <p class="line2">近日，由窦骁娜扎浪漫演绎的热播剧《十年三月三十日》甜蜜收官，
-                大结局的告白撒花时刻，甜蜜撒糖...</p>
-            </a>
-          </div>
-        </li>
+      <ul class="zixun-list2 flex" id="zixun3">
+       
       </ul>
+      <script id="zixun3_tpl" type="text/html">
+        {{#  layui.each(d.list, function(index, item){ }}
+        <li>
+            <div class="zixun-list2-img  w100 positionr">
+              <img src="images/zixun-img-bg.jpg" alt="" srcset="" class="w100">
+              <a class="positionb">
+                <img src="{{item.img}}" alt="" srcset="" class="w100">
+              </a>
+            </div>
+            <div class="zixun-p">
+              <a>
+                <p class="fon18 colororg nowarp">{{item.title}}</p>
+                <p class="line2">{{item.desc}}</p>
+              </a>
+            </div>
+          </li>
+          {{#  }); }}
+      </script>
+      
       <div class="page text-center">
         <a href="">&lt;</a>
         <a href="">1</a>
@@ -295,6 +150,102 @@
         <a href=""> &gt;</a>
       </div>
     </div>
+    <script>
+      layui.use('laytpl', function () {
+        var laytpl = layui.laytpl;
+        var zixun1_list = {
+          //品牌新闻数据
+          "list": [
+            {
+              "id": "02",
+              "title": "一生一爱”明星婚嫁系列",
+              "desc": "以一为设计灵感，传递一爱一人生的幸福哲学，经由时间美丽隽永的信物，为你永久珍藏。",
+              "img": "images/zixun-img.jpg"
+            },
+            {
+              "id": "03",
+              "title": "一生一爱”明星婚嫁系列",
+              "desc": "以一为设计灵感，传递一爱一人生的幸福哲学，经由时间美丽隽永的信物，为你永久珍藏。",
+              "img": "images/zixun-img.jpg"
+            }
+          ]
+        }
+        var getTpl_zixun1 = zixun1_tpl.innerHTML;
+        var view1 = document.getElementById('zixun1');
+        laytpl(getTpl_zixun1).render(zixun1_list, function (html) {
+          view1.innerHTML = html;
+        });
+
+        var zixun2_list = {
+          //品牌新闻数据
+          "list": [
+            {
+              "id": "02",
+              "title": "一生一爱”明星婚嫁系列",
+              "desc": "以一为设计灵感，传递一爱一人生的幸福哲学，经由时间美丽隽永的信物，为你永久珍藏。",
+              "img": "images/zixun-img.jpg"
+            },
+            {
+              "id": "03",
+              "title": "一生一爱”明星婚嫁系列",
+              "desc": "以一为设计灵感，传递一爱一人生的幸福哲学，经由时间美丽隽永的信物，为你永久珍藏。",
+              "img": "images/zixun-img.jpg"
+            }
+          ]
+        }
+        var getTpl_zixun2 = zixun2_tpl.innerHTML;
+        var view2 = document.getElementById('zixun2');
+        laytpl(getTpl_zixun2).render(zixun2_list, function (html) {
+          view2.innerHTML = html;
+        });
+
+        var zixun3_list = {
+          //品牌新闻数据
+          "list": [
+            {
+              "id": "02",
+              "title": "一生一爱”明星婚嫁系列",
+              "desc": "以一为设计灵感，传递一爱一人生的幸福哲学，经由时间美丽隽永的信物，为你永久珍藏。",
+              "img": "images/zixun-img.jpg"
+            },
+            {
+              "id": "03",
+              "title": "一生一爱”明星婚嫁系列",
+              "desc": "以一为设计灵感，传递一爱一人生的幸福哲学，经由时间美丽隽永的信物，为你永久珍藏。",
+              "img": "images/zixun-img.jpg"
+            },{
+              "id": "02",
+              "title": "一生一爱”明星婚嫁系列",
+              "desc": "以一为设计灵感，传递一爱一人生的幸福哲学，经由时间美丽隽永的信物，为你永久珍藏。",
+              "img": "images/zixun-img.jpg"
+            },
+            {
+              "id": "03",
+              "title": "一生一爱”明星婚嫁系列",
+              "desc": "以一为设计灵感，传递一爱一人生的幸福哲学，经由时间美丽隽永的信物，为你永久珍藏。",
+              "img": "images/zixun-img.jpg"
+            },{
+              "id": "02",
+              "title": "一生一爱”明星婚嫁系列",
+              "desc": "以一为设计灵感，传递一爱一人生的幸福哲学，经由时间美丽隽永的信物，为你永久珍藏。",
+              "img": "images/zixun-img.jpg"
+            },
+            {
+              "id": "03",
+              "title": "一生一爱”明星婚嫁系列",
+              "desc": "以一为设计灵感，传递一爱一人生的幸福哲学，经由时间美丽隽永的信物，为你永久珍藏。",
+              "img": "images/zixun-img.jpg"
+            }
+          ]
+        }
+        var getTpl_zixun3 = zixun3_tpl.innerHTML;
+        var view3 = document.getElementById('zixun3');
+        laytpl(getTpl_zixun3).render(zixun3_list, function (html) {
+          view3.innerHTML = html;
+        });
+
+      })
+    </script>
   </div>
 
 

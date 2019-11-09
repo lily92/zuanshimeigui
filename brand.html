@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" media="screen and (max-width:767px)" href="css/phone.css" />
   <script src="js/jquery.min.js"></script>
+  <script src="layui/layui.js"></script>
   <script src="js/swiper.min.js"></script>
   <script src="js/main.js"></script>
   <title>钻石玫瑰</title>
@@ -43,34 +44,26 @@
         <p>采撷一束极慕光芒，即刻开启你的时光账号。</p>
       </div>
     </div>
-    <div class="brand-right">
-      <ul class="brand-list">
-        <li>
-          <p><a href="" class="fon16 colororg">“一生一爱”明星婚嫁系列</a></p>
-          <p class="line2 color0 brand-p">以“一”为设计灵感，传递一爱一人生的幸福哲学，经由时间美丽隽永的信物，
-            为你永久珍藏。</p>
-          <div class="positionr">
-            <!-- 占位符，勿读图片 -->
-            <img src="images/b-img2-bg.jpg" alt="" srcset="" class="w100">
-            <div class="positionb">
-              <img src="images/b-img2.jpg" alt="" srcset="" class="w100">
-            </div>
-          </div>
-        </li>
-        <li>
-          <p><a href="" class="fon16 colororg">“一生一爱”明星婚嫁系列</a></p>
-          <p class="line2 color0 brand-p">以“一”为设计灵感，传递一爱一人生的幸福哲学，经由时间美丽隽永的信物，
-            为你永久珍藏。</p>
-          <div class="positionr">
-            <!-- 占位符，勿读图片 -->
-            <img src="images/b-img2-bg.jpg" alt="" srcset="" class="w100">
-            <div class="positionb">
-              <img src="images/b-img2.jpg" alt="" srcset="" class="w100">
-            </div>
-          </div>
-        </li>
-      </ul>
+    <div class="brand-right" id="brand_right">
     </div>
+    <script id="brand_right_tpl" type="text/html">
+      <ul class="brand-list">
+      {{#  layui.each(d.list, function(index, item){ }}
+      <li>
+        <p><a href="" class="fon16 colororg">{{item.title}}</a></p>
+        <p class="line2 color0 brand-p">{{item.desc}}</p>
+        <div class="positionr">
+          <!-- 占位符，勿读图片 -->
+          <img src="images/b-img2-bg.jpg" alt="" srcset="" class="w100">
+          <div class="positionb">
+            <img src="{{item.img}}" alt="" srcset="" class="w100">
+          </div>
+        </div>
+      </li>
+      {{#  }); }}
+    </ul>
+    </script>
+
   </div>
   <!--end  brand-item -->
 
@@ -81,109 +74,120 @@
       <p class="fon16 colororg fonar">Star Wedding Series</p>
       <p class="line-f"><img src="images/icon-f.png" alt="" srcset="" class="line-f-icon"></p>
     </div>
-    <ul class="brand-lists">
-      <li>
-        <div class="brand-img positionr">
-          <!-- 图片占位符，勿读图片 -->
-          <img src="images/prod/prod-img-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
-          <div class="positionb">
-            <img src="images/prod/prod-img.jpg" alt="" srcset="" class="w100">
-          </div>
-          <div class="positionb master flex flex-center text-center">
-            <div>
-              <h3>钻石世家一诺一生群镶钻石耳钉</h3>
-              <p class="line2 txt">灵感来源于菩提花，10颗美钻环绕主钻，群镶钻戒共500多个切面，使光芒透过更多切面折射，形成克拉效果。</p>
-              <p class="add-btn"><a href=""><img src="images/jiahao.png" alt="" srcset=""></a></p>
+    <div  id="brandlist">
+    </div>
+    <script id="brandlist_tpl" type="text/html">
+      <ul class="brand-lists ">
+          {{#  layui.each(d.list, function(index, item){ }}
+        <li>
+          <div class="brand-img positionr">
+            <!-- 图片占位符，勿读图片 -->
+            <img src="images/prod/prod-img-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
+            <div class="positionb">
+              <img src="images/prod/prod-img.jpg" alt="" srcset="" class="w100">
+            </div>
+            <div class="positionb master flex flex-center text-center">
+              <div>
+                <h3>钻石世家一诺一生群镶钻石耳钉0</h3>
+                <p class="line2 txt">灵感来源于菩提花，10颗美钻环绕主钻，群镶钻戒共500多个切面，使光芒透过更多切面折射，形成克拉效果。</p>
+                <p class="add-btn"><a href=""><img src="images/jiahao.png" alt="" srcset=""></a></p>
+              </div>
             </div>
           </div>
-        </div>
-      </li>
-      <li>
-        <div class="brand-img positionr">
-          <!-- 图片占位符，勿读图片 -->
-          <img src="images/prod/prod-img-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
-          <div class="positionb">
-            <img src="images/prod/prod-img.jpg" alt="" srcset="" class="w100">
-          </div>
-          <div class="positionb master flex flex-center text-center">
-            <div>
-              <h3>钻石世家一诺一生群镶钻石耳钉</h3>
-              <p class="line2 txt">灵感来源于菩提花，10颗美钻环绕主钻，群镶钻戒共500多个切面，使光芒透过更多切面折射，形成克拉效果。</p>
-              <p class="add-btn"><a href=""><img src="images/jiahao.png" alt="" srcset=""></a></p>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="brand-img positionr">
-          <!-- 图片占位符，勿读图片 -->
-          <img src="images/prod/prod-img-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
-          <div class="positionb">
-            <img src="images/prod/prod-img.jpg" alt="" srcset="" class="w100">
-          </div>
-          <div class="positionb master flex flex-center text-center">
-            <div>
-              <h3>钻石世家一诺一生群镶钻石耳钉</h3>
-              <p class="line2 txt">灵感来源于菩提花，10颗美钻环绕主钻，群镶钻戒共500多个切面，使光芒透过更多切面折射，形成克拉效果。</p>
-              <p class="add-btn"><a href=""><img src="images/jiahao.png" alt="" srcset=""></a></p>
-            </div>
-          </div>
-        </div>
-      </li>
-
-      <li>
-        <div class="brand-img positionr">
-          <!-- 图片占位符，勿读图片 -->
-          <img src="images/prod/prod-img-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
-          <div class="positionb">
-            <img src="images/prod/prod-img.jpg" alt="" srcset="" class="w100">
-          </div>
-          <div class="positionb master flex flex-center text-center">
-            <div>
-              <h3>钻石世家一诺一生群镶钻石耳钉</h3>
-              <p class="line2 txt">灵感来源于菩提花，10颗美钻环绕主钻，群镶钻戒共500多个切面，使光芒透过更多切面折射，形成克拉效果。</p>
-              <p class="add-btn"><a href=""><img src="images/jiahao.png" alt="" srcset=""></a></p>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="brand-img positionr">
-          <!-- 图片占位符，勿读图片 -->
-          <img src="images/prod/prod-img-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
-          <div class="positionb">
-            <img src="images/prod/prod-img.jpg" alt="" srcset="" class="w100">
-          </div>
-          <div class="positionb master flex flex-center text-center">
-            <div>
-              <h3>钻石世家一诺一生群镶钻石耳钉</h3>
-              <p class="line2 txt">灵感来源于菩提花，10颗美钻环绕主钻，群镶钻戒共500多个切面，使光芒透过更多切面折射，形成克拉效果。</p>
-              <p class="add-btn"><a href=""><img src="images/jiahao.png" alt="" srcset=""></a></p>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="brand-img positionr">
-          <!-- 图片占位符，勿读图片 -->
-          <img src="images/prod/prod-img-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
-          <div class="positionb">
-            <img src="images/prod/prod-img.jpg" alt="" srcset="" class="w100">
-          </div>
-          <div class="positionb master flex flex-center text-center">
-            <div>
-              <h3>钻石世家一诺一生群镶钻石耳钉</h3>
-              <p class="line2 txt">灵感来源于菩提花，10颗美钻环绕主钻，群镶钻戒共500多个切面，使光芒透过更多切面折射，形成克拉效果。</p>
-              <p class="add-btn"><a href=""><img src="images/jiahao.png" alt="" srcset=""></a></p>
-            </div>
-          </div>
-        </div>
-      </li>
-
-
-    </ul>
+        </li>
+        {{#  }); }}
+      </ul>
+    </script>
   </div>
   <!-- end brand list -->
+  <script>
+    layui.use('laytpl', function () {
+      var laytpl = layui.laytpl;
+      var data_brand_news = {
+        //品牌新闻数据
+        "list": [
+          {
+            "id": "02",
+            "title": "一生一爱”明星婚嫁系列",
+            "desc": "以一为设计灵感，传递一爱一人生的幸福哲学，经由时间美丽隽永的信物，为你永久珍藏。",
+            "img": "images/b-img2.jpg"
+          },
+          {
+            "id": "03",
+            "title": "一生一爱”明星婚嫁系列",
+            "desc": "以一为设计灵感，传递一爱一人生的幸福哲学，经由时间美丽隽永的信物，为你永久珍藏。",
+            "img": "images/b-img2.jpg"
+          }
+        ]
+      }
+      var getTpl = brand_right_tpl.innerHTML;
+      var view = document.getElementById('brand_right');
+      laytpl(getTpl).render(data_brand_news, function (html) {
+        view.innerHTML = html;
+      });
+
+      // 品牌产品列表数据
+      var data_brand_product = {
+        "list": [
+          {
+            "id": "11",
+            "title": "钻石世家一诺一生群镶钻石耳钉",
+            "desc": "灵感来源于菩提花，10颗美钻环绕主钻，群镶钻戒共500多个切面，使光芒透过更多切面折射，形成克拉效果。",
+            "img": "images/prod/prod-img.jpg"
+          },
+          {
+            "id": "11",
+            "title": "钻石世家一诺一生群镶钻石耳钉",
+            "desc": "灵感来源于菩提花，10颗美钻环绕主钻，群镶钻戒共500多个切面，使光芒透过更多切面折射，形成克拉效果。",
+            "img": "images/prod/prod-img.jpg"
+          },
+          {
+            "id": "11",
+            "title": "钻石世家一诺一生群镶钻石耳钉",
+            "desc": "灵感来源于菩提花，10颗美钻环绕主钻，群镶钻戒共500多个切面，使光芒透过更多切面折射，形成克拉效果。",
+            "img": "images/prod/prod-img.jpg"
+          },
+          {
+            "id": "11",
+            "title": "钻石世家一诺一生群镶钻石耳钉",
+            "desc": "灵感来源于菩提花，10颗美钻环绕主钻，群镶钻戒共500多个切面，使光芒透过更多切面折射，形成克拉效果。",
+            "img": "images/prod/prod-img.jpg"
+          },
+          {
+            "id": "11",
+            "title": "钻石世家一诺一生群镶钻石耳钉",
+            "desc": "灵感来源于菩提花，10颗美钻环绕主钻，群镶钻戒共500多个切面，使光芒透过更多切面折射，形成克拉效果。",
+            "img": "images/prod/prod-img.jpg"
+          },
+          {
+            "id": "11",
+            "title": "钻石世家一诺一生群镶钻石耳钉",
+            "desc": "灵感来源于菩提花，10颗美钻环绕主钻，群镶钻戒共500多个切面，使光芒透过更多切面折射，形成克拉效果。",
+            "img": "images/prod/prod-img.jpg"
+          },
+          {
+            "id": "11",
+            "title": "钻石世家一诺一生群镶钻石耳钉",
+            "desc": "灵感来源于菩提花，10颗美钻环绕主钻，群镶钻戒共500多个切面，使光芒透过更多切面折射，形成克拉效果。",
+            "img": "images/prod/prod-img.jpg"
+          },
+          {
+            "id": "11",
+            "title": "钻石世家一诺一生群镶钻石耳钉",
+            "desc": "灵感来源于菩提花，10颗美钻环绕主钻，群镶钻戒共500多个切面，使光芒透过更多切面折射，形成克拉效果。",
+            "img": "images/prod/prod-img.jpg"
+          }
+
+        ]
+      }
+      var getTpl_brand = brandlist_tpl.innerHTML;
+      var view_brand = document.getElementById('brandlist');
+      laytpl(getTpl_brand).render(data_brand_product, function (html) {
+        view_brand.innerHTML = html;
+      });
+
+    })
+  </script>
 
   <!--star  footer -->
   <footer class="footer text-center  max1200">
