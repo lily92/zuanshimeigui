@@ -1070,7 +1070,7 @@ header {
     width: 100%;
     background-size: contain;
   }
-  .mx-item2-line::after {
+  .mx-item2-line::before {
     position: absolute;
     content: "";
     height: 60px;
@@ -1079,6 +1079,9 @@ header {
     bottom: -60px;
     left: 98%;
   }
+}
+.max867:last-child{
+  .mx-item2-line::before{display: none;}
 }
 
 .mx-list {
@@ -1112,6 +1115,7 @@ header {
     padding-right: 5px;
     position: relative;
     color: $color9;
+     transition: .3s linear all;
   }
   .mx-more::after {
     position: absolute;
@@ -1125,6 +1129,8 @@ header {
     top: 48%;
     transform: translateY(-50%);
   }
+  .mx-more:hover { background: $color0; color: $colorf;}
+  .mx-more:hover::after{ border-color: transparent transparent transparent #fff;}
   li:nth-child(2n) {
     flex-direction: row-reverse;
     

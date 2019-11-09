@@ -1384,7 +1384,7 @@ header {
   background-size: contain;
 }
 
-.max867 .mx-item2-line::after {
+.max867 .mx-item2-line::before {
   position: absolute;
   content: "";
   height: 60px;
@@ -1392,6 +1392,10 @@ header {
   background: #f6bcb5;
   bottom: -60px;
   left: 98%;
+}
+
+.max867:last-child .mx-item2-line::before {
+  display: none;
 }
 
 .mx-list {
@@ -1430,6 +1434,7 @@ header {
   padding-right: 5px;
   position: relative;
   color: #999;
+  transition: .3s linear all;
 }
 
 .mx-list .mx-more::after {
@@ -1443,6 +1448,15 @@ header {
   right: 5px;
   top: 48%;
   transform: translateY(-50%);
+}
+
+.mx-list .mx-more:hover {
+  background: #000;
+  color: #fff;
+}
+
+.mx-list .mx-more:hover::after {
+  border-color: transparent transparent transparent #fff;
 }
 
 .mx-list li:nth-child(2n) {
