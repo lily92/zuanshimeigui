@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" media="screen and (max-width:767px)" href="css/phone.css" />
+  <script src="js/jquery.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/main.js"></script>
+  <title>钻石玫瑰</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="">
+  </header>
+  <!--end  header -->
+
+  <!--star banner -->
+  <div class="banner-brand max1200 ">
+    <img src="images/j-banner.jpg" alt="" srcset="" class="w100 ">
+
+  </div>
+  <!-- end banner -->
+  <div class="max1200 clearfix">
+    <br>
+    <div class="text-center">
+      <p class="fon24 colororg">常设的招聘职位</p>
+      <p class="line-f"><img src="images/icon-f.png" alt="" srcset="" class="line-f-icon"></p>
+    </div>
+    <br>
+    <div class="max1090">
+      <div class="exployee_4_container">
+        <div class="table_view">
+          <div class="table_title_bottom_line">
+            <span class="title_left">请填写以下资料</span><span class="write_date">填表日期2019年11月14日</span>
+          </div>
+          <table width="100%" class="base_info_table">
+            <tbody>
+              <tr>
+                <td valign="middle" width="230px">申请职位：销售总监/经理（全国范围）<input type="hidden" value="销售总监/经理（全国范围）"
+                    name="job_title"><input type="hidden" value="1" name="job_id"></td>
+                <td valign="middle" width="354px"><span class="base_info_title_right">最高学历（学历/科）：</span><input
+                    name="job_education" class="normal_input"></td>
+                <td width="210px" rowspan="4">
+                  <a class="table_head" style="cursor: pointer;">
+                    <span style="font-size:14px;padding-top:80px;">近期一寸彩照</span>
+                    <span>（点击上传）</span>
+                    <div class="head_img" id="head_img_container"></div>
+                  </a>
+                  <input type="file" name="head_img" id="head_img" style="display:none;">
+                </td>
+              </tr>
+              <tr>
+                <td valign="middle" width="230px">要求薪资：<input name="job_salary" class="normal_input"></td>
+                <td valign="middle" width="354px"><span class="base_info_title_right">可到职日期：</span><input
+                    name="job_reach" class="normal_input"></td>
+              </tr>
+              <tr>
+                <td valign="middle" width="230px">联络电话：<input name="job_phone" class="normal_input"></td>
+                <td valign="middle" width="354px"><span class="base_info_title_right">应聘职位信息来源：</span><input
+                    name="job_source" class="normal_input"></td>
+              </tr>
+              <tr>
+                <td valign="middle" width="230px">邮箱地址：<input name="job_email" class="normal_input"></td>
+                <td valign="middle" width="354px"><span class="base_info_title_right">QQ号码/微信号：</span><input
+                    name="job_qqweichat" class="normal_input">&nbsp;(选填)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table_view">
+          <div class="table_title_bottom_line">
+            <span>个人资料</span>
+          </div>
+          <table width="100%" class="base_info_table base_info_table2">
+            <tbody>
+              <tr>
+                <td valign="middle" width="202px" height="54px">
+                  姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：<input name="job_user_name" class="normal_input">
+                </td>
+                <td valign="middle" width="200px" height="54px"><span class="base_info_title_right">身份证号码：</span><input
+                    name="job_id_card" class="normal_input"></td>
+                <td valign="middle" width="210px" height="54px"><span
+                    class="table_right_title">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</span><input
+                    name="job_gender" class="normal_input"></td>
+              </tr>
+              <tr>
+                <td valign="middle" width="100px" height="54px">
+                  籍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;贯：<input name="job_native_place"
+                    class="normal_input"></td>
+                <td valign="middle" width="200px" height="54px"><span class="base_info_title_right">出生日期：</span><input
+                    name="job_birth_day" class="normal_input"></td>
+                <td valign="middle" width="210px" height="54px"><span
+                    class="table_right_title">婚&nbsp;姻&nbsp;状&nbsp;况：</span><input name="job_marriage"
+                    class="normal_input"></td>
+              </tr>
+              <tr>
+                <td valign="middle" width="100px" height="54px">
+                  年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;龄：<input name="job_age" class="normal_input"></td>
+                <td valign="middle" width="200px" height="54px"><span class="base_info_title_right">身高（米）：</span><input
+                    name="job_height" class="normal_input">&nbsp;(选填)</td>
+                <td valign="middle" width="210px" height="54px"><span class="table_right_title">体重(公斤)：</span><input
+                    name="job_weight" class="normal_input">&nbsp;(选填)</td>
+              </tr>
+              <tr>
+                <td colspan="3" height="60px;">
+                  <p>是否有既往病史&nbsp;(选填)</p>
+                  <div>
+                    <input type="radio" name="job_sick_history" value="1"
+                      class="radio"><span>&nbsp;无</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="job_sick_history" value="2" class="radio"><span>&nbsp;精神疾病</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="job_sick_history" value="3" class="radio"><span>&nbsp;肝、肺等传染性疾病</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="job_sick_history" value="4" class="radio"><span>&nbsp;心脏疾病</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="job_sick_history" value="5" class="radio"><span>&nbsp;其他疾病：</span><input
+                      name="job_sick_other" class="only_bottom_line" style="width:250px;">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3" height="60px">
+                  <div style="padding-top:10px;">
+                    <strong>住址：</strong>
+                    <span>家庭地址：</span><input name="job_home_address" class="normal_input"
+                      style="width:300px;">&nbsp;&nbsp;
+                    <span>身份证地址：</span><input name="job_idcard_address" class="normal_input" style="width:300px;">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3" height="40px;">
+                  <span>爱好特长：</span><input name="job_favorite" class="only_bottom_line" style="width:745px;">&nbsp;(选填)
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        <div class="table_view">
+          <div class="table_title_bottom_line">
+            <span>语言技能</span>
+          </div>
+          <table width="100%" class="base_info_table base_info_table2">
+            <tbody>
+              <tr>
+                <td colspan="3" height="40px;">
+                  <strong>国语:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <input type="radio" value="1" name="job_chinese" class="radio"><span>&nbsp;听</span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <input type="radio" value="2" name="job_chinese" class="radio"><span>&nbsp;说</span>
+                  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                  <input type="radio" value="3" name="job_chinese" class="radio"><span>&nbsp;一般</span>
+                  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                  <input type="radio" value="4" name="job_chinese" class="radio"><span>&nbsp;流利</span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <strong>粤语:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <input type="radio" value="1" name="job_guangdong" class="radio"><span>&nbsp;听</span>
+                  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                  <input type="radio" value="2" name="job_guangdong" class="radio"><span>&nbsp;说</span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <input type="radio" value="3" name="job_guangdong" class="radio"><span>&nbsp;一般</span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <input type="radio" value="4" name="job_guangdong" class="radio"><span>&nbsp;流利</span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <strong>英语:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <input type="radio" value="1" name="job_english" class="radio"><span>&nbsp;听</span>
+                  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                  <input type="radio" value="2" name="job_english" class="radio"><span>&nbsp;说</span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <input type="radio" value="3" name="job_english" class="radio"><span>&nbsp;一般</span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <input type="radio" value="4" name="job_english" class="radio"><span>&nbsp;流利</span>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3" height="60px;">
+                  <p><strong>计算机能力</strong></p>
+                  <div>
+                    <span>应用软件：</span><input name="job_software" class="only_bottom_line"
+                      style="width:250px;">&nbsp;(选填)&nbsp;&nbsp;
+                    <span>打字速度：</span><input name="job_typing" class="only_bottom_line" style="width:250px;">&nbsp;(选填)
+                  </div>
+                  <div style="margin-top:20px;">
+                    <span>其他技能：</span><input name="job_other_skill" class="only_bottom_line"
+                      style="width:750px;">&nbsp;(选填)
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table_view">
+          <div class="table_title_bottom_line">
+            <span>学历（由最高填起）</span>
+          </div>
+          <table width="100%" bgcolor="#aaa8a3" style="border-spacing:1px;border-collapse:separate" cellpadding="6"
+            cellspacing="1" class="base_info_table base_info_table2 baseinfo_info_table3">
+            <tbody>
+              <tr>
+                <td align="center" height="36px" bgcolor="#FFFFFF" colspan="2">由</td>
+                <td align="center" bgcolor="#FFFFFF" colspan="2">终</td>
+                <td align="center" bgcolor="#FFFFFF" width="585px" rowspan="2">学府名称</td>
+                <td align="center" bgcolor="#FFFFFF" width="260px" rowspan="2">考取资历/主修科目</td>
+              </tr>
+              <tr>
+                <td align="center" bgcolor="#FFFFFF">年</td>
+                <td align="center" bgcolor="#FFFFFF">月</td>
+                <td align="center" bgcolor="#FFFFFF">年</td>
+                <td align="center" bgcolor="#FFFFFF">月</td>
+              </tr>
+              <tr>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_education_start_year_1"
+                    class="noborder"></td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_education_start_month_1"
+                    class="noborder"></td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_education_end_year_1"
+                    class="noborder"></td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_education_end_month_1"
+                    class="noborder"></td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_education_school_1"
+                    class="noborder">
+                </td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_education_subject_1"
+                    class="noborder">
+                </td>
+              </tr>
+              <tr>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_education_start_year_2"
+                    class="noborder"></td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_education_start_month_2"
+                    class="noborder"></td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_education_end_year_2"
+                    class="noborder"></td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_education_end_month_2"
+                    class="noborder"></td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_education_school_2"
+                    class="noborder">
+                </td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_education_subject_2"
+                    class="noborder">
+                </td>
+              </tr>
+              <tr>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_education_start_year_3"
+                    class="noborder"></td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_education_start_month_3"
+                    class="noborder"></td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_education_end_year_3"
+                    class="noborder"></td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_education_end_month_3"
+                    class="noborder"></td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_education_school_3"
+                    class="noborder">
+                </td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_education_subject_3"
+                    class="noborder">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="table_view clearfix">
+          <div class="table_title_bottom_line">
+            <span>工作记录</span>
+          </div>
+          <table width="100%" bgcolor="#aaa8a3" style="border-spacing:1px;border-collapse:separate" cellpadding="6"
+            cellspacing="1" class="base_info_table base_info_table2 baseinfo_info_table3">
+            <tbody>
+              <tr>
+                <td align="center" height="36px" bgcolor="#FFFFFF" colspan="2">由</td>
+                <td align="center" bgcolor="#FFFFFF" colspan="2">终</td>
+                <td align="center" bgcolor="#FFFFFF" width="200px" rowspan="2">公司名称</td>
+                <td align="center" bgcolor="#FFFFFF" width="100px" rowspan="2">职务</td>
+                <td align="center" bgcolor="#FFFFFF" width="100px" rowspan="2">薪资</td>
+                <td align="center" bgcolor="#FFFFFF" width="160px" rowspan="2">离职原因</td>
+                <td align="center" bgcolor="#FFFFFF" width="100px" rowspan="2"> 咨询人/有线电话</td>
+              </tr>
+              <tr>
+                <td align="center" bgcolor="#FFFFFF">年</td>
+                <td align="center" bgcolor="#FFFFFF">月</td>
+                <td align="center" bgcolor="#FFFFFF">年</td>
+                <td align="center" bgcolor="#FFFFFF">月</td>
+              </tr>
+              <tr>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_work_start_year_1" class="noborder">
+                </td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_work_start_month_1"
+                    class="noborder">
+                </td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_work_end_year_1" class="noborder">
+                </td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_work_end_month_1" class="noborder">
+                </td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_work_company_1" class="noborder">
+                </td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_work_position_1" class="noborder">
+                </td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_work_pay_1" class="noborder"></td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_work_leave_1" class="noborder"></td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="jow_work_concat_1" class="noborder">
+                </td>
+              </tr>
+              <tr>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_work_start_year_2" class="noborder">
+                </td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_work_start_month_2"
+                    class="noborder">
+                </td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_work_end_year_2" class="noborder">
+                </td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_work_end_month_2" class="noborder">
+                </td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_work_company_2" class="noborder">
+                </td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_work_position_2" class="noborder">
+                </td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_work_pay_2" class="noborder"></td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_work_leave_2" class="noborder"></td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="jow_work_concat_2" class="noborder">
+                </td>
+              </tr>
+              <tr>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_work_start_year_3" class="noborder">
+                </td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_work_start_month_3"
+                    class="noborder">
+                </td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_work_end_year_3" class="noborder">
+                </td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_work_end_month_3" class="noborder">
+                </td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_work_company_3" class="noborder">
+                </td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_work_position_3" class="noborder">
+                </td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_work_pay_3" class="noborder"></td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="job_work_leave_3" class="noborder"></td>
+                <td height="40px" align="center" bgcolor="#FFFFFF"><input name="jow_work_concat_3" class="noborder">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="color:#585858;line-height:28px;margin-top:28px;">
+            本人（职位申请人）仅此声名，以上所填之资料乃全部真确无讹。本人清楚明白倘若日后受聘于公司而有任何虚假不实之资料，一经查证，本人愿接受即时解雇处理而不予以任何通知期或补偿金。</p>
+          <div class="flex al-end">
+            <a class="job_submit" style="cursor: pointer;">提交</a>
+            <div style="color:#585858;margin-top:60px; margin-left: 10px;"><span>申请人签署：</span><input
+                name="job_mark_name" class="only_bottom_line"></div>
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(function () {
+      $('.join_it').click(function (e) {
+        e.preventDefault();
+        $('.job-master').addClass('active')
+
+      });
+      $('.login_close').click(function (e) {
+        e.preventDefault();
+        $('.job-master').removeClass('active')
+      });
+    })
+  </script>
+
+  <!--star  footer -->
+  <footer class="footer text-center  max1200">
+  </footer>
+  <!-- end footer -->
+
+</body>
+
+</html>
